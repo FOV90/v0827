@@ -53,7 +53,7 @@ namespace v0827
             label2.Text = ""+mp.X+" ,"+mp.Y+"";
 
             if((mp.X>=label1.Left)
-                &&(mp.X>label1.Right)
+                &&(mp.X<label1.Right)
                 &&(mp.Y>=label1.Top)
                 &&(mp.Y<label1.Bottom)
                 )
