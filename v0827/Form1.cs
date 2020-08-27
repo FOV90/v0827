@@ -28,6 +28,22 @@ namespace v0827
         {
             label1.Left += vx;
             label1.Top += vy;
+            if (label1.Left < 0)
+            {
+                vx = Math.Abs(vx) * 110 / 100;
+            }
+            if (label1.Top < 0)
+            {
+                vy = Math.Abs(vy) * 110 / 100;
+            }
+            if (label1.Right > ClientSize.Width)
+            {
+                vx = -Math.Abs(vx) * 110 / 100;
+            }
+            if (label1.Bottom > ClientSize.Height)
+            {
+                vy = -Math.Abs(vy) * 110 / 100;
+            }
 
             Point mp = MousePosition;
             mp = PointToClient(mp);
